@@ -15,25 +15,9 @@ namespace tatlibirdeneme
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //int count3ek = Convert.ToInt32(Math.Round(numericUpDown3.Value, 0));
-            //int count4ek = Convert.ToInt32(Math.Round(numericUpDown4.Value, 0));
-
-            //Size size = new Size(count1ek, count2ek);
-            //pictureBox1.Size = new Size(count3ek, count4ek); //alan buyuklkugunu belirleyecek ekran
-
             sekilSec.Items.Add("Nokta");
             sekilSec.Items.Add("Cizgi");
             sekilSec.Items.Add("Poligon");
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void sekilSec_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,27 +44,7 @@ namespace tatlibirdeneme
                 turSec.Items.Add("Dolu");
             }
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buton1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
         List<DrawAction> actions = new List<DrawAction>();
 
         public class DrawAction
@@ -252,26 +216,7 @@ namespace tatlibirdeneme
                 }
             }
         }
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Layout(object sender, LayoutEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
         public void Draw(Graphics G, List<DrawAction> actions)
         {
             foreach (DrawAction da in actions)
@@ -294,55 +239,11 @@ namespace tatlibirdeneme
                         G.DrawLines(pen, da.points.ToArray());
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Resize(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             int count1ni = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
             int count2ni = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
         }
-
-        private void pictureBox1_Paint_1(object sender, PaintEventArgs e)
-        {
-            //e.Graphics.DrawPolygon(Pens.Red, Points);
-        }
-
-        /*private void pictureBox1_Resize(object sender, EventArgs e)
-        {
-            int count1ek = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
-            int count2ek = Convert.ToInt32(Math.Round(numericUpDown2.Value, 0));
-
-            Size size = new Size(count1ek, count2ek);
-            pictureBox1.Size = size;
-
-        }*/
     }
 }
